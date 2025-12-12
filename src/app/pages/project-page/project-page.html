@@ -7,5 +7,27 @@
         </div>
     </div>
 
-    <app-project/>
+    
+
+    <div>
+        <button *ngIf="showButton">Click Me</button>
+        <button *ngIf="numberOfItems > 5">Number of Items</button>
+
+        <div>
+              <div *ngFor="let project of projectList ">
+                {{ project.id}}
+              </div>  
+        </div>
+    </div>
+
+    {{showProjects}}
+
+    <button (click)="toggleShowProjects()">Projects</button>
+    <div *ngIf="showProjects">
+        <div  *ngFor="let p of projectList; let i =index" class="project-list">
+           <app-project [title]="p.title" [description]="p.desc" [link1]="p.link1" />
+        </div>
+    </div>
+
+
 </section>

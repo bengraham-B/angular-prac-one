@@ -7,15 +7,15 @@
     <span class="details-container">
 
         <div class="title-wrapper">
-            <h3>Project 1: Lorem, ipsum dolor.</h3>
+            <h3>{{ title ? title : "1: Lorem, ipsum dolor."}}</h3>
         </div>
 
         <div class="desc-wrapper">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat aliquam similique soluta suscipit provident, dolorem voluptate qui sit sapiente voluptatum dicta. Saepe eligendi voluptatibus numquam veniam ratione magnam ipsa ut distinctio blanditiis! Perspiciatis, molestiae.</p>
+            <p>{{description}}</p>
         </div>
 
         <div class="link-wrapper">
-            <a href="#">Link 1</a>
+            <a href="#">{{link1 ? link1 : "none"}}</a>
             <a href="#">Link 1</a>
             <a href="#">Link 1</a>
         </div>
